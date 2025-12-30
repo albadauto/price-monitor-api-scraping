@@ -1,1 +1,1 @@
-# price-monitor-api-scraping
+# Monitor price in fastapi, python and playwright
