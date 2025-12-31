@@ -1,9 +1,9 @@
 from sqlalchemy import Column, Integer, String, Float, Date
-from app.core.database import Base
 from datetime import date, timedelta
+from database.database import Base
+
 class Payload(Base):
     __tablename__ = "payloads"  
-    
     id = Column(Integer, primary_key=True, index=True)
     data = Column(String, index=True)
     description = Column(String, index=True)
