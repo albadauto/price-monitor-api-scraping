@@ -5,9 +5,8 @@ class BaseScrapper(ABC):
     def __init__(self, url: str):
         self.url = url
         
-        
     @abstractmethod
-    def get_price(self) -> float:
+    def get_price(self, payload_id: int) -> float:
         pass
     
     @abstractmethod

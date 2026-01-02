@@ -7,9 +7,9 @@ async def main():
     try:
         pending = await PendingServices.fetch_pending_services(db)
         if "mercadolivre.com" in pending.url:
-            await scrape_in_mercadolivre(pending.url)
-        elif "amazon.com" in pending.url:
-            await scrape_in_amazon(pending.url)
+            await scrape_in_mercadolivre(pending.url, pending.id)
+        elif "amazon.com.br" in pending.url:
+            await scrape_in_amazon(pending.url, pending.id)
     finally:
         db.close()
 
